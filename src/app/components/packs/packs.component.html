@@ -8,17 +8,16 @@
             <div class="container-fluid" id="masVendidasYrecomendadas">
                 <div class="container d-flex">
                     <div>
-                        <h2><span class="fs-1 fuenteBotones">LOS</span><br><span class="fuenteBotones fuenteGrande">PAKS</span></h2>
+                        <h2 class="fuenteBotones fuenteGrande">PRODUCTOS</h2>
                     </div>
                 </div>
-                <div class=" container">
+                <div class="container">
                     <div class="row">
                         <ng-container *ngFor="let item of productList">
-                            <div class="card col-sm-1 col-lg-4 col-md-3 mb-3" style="height: 700px;">
-                                <img style="cursor:pointer;" (click)="addtoIndividual(item)" routerLink="/descripcionProducto" src="{{item.imagen}}" class=" w-25 h-25 " alt="...">
+                            <div class="m-2 card col-sm-1 col-lg-4 col-md-3 mb-3 d-flex justify-content-center align-items-center g-2" style="height: 400px; width: 400px;">
+                                <img style="cursor:pointer;" (click)="addtoIndividual(item)" routerLink="/descripcionProducto" src="{{item.imagen}}" class=" w-auto h-50" alt="...">
                                 <div class="card-body ">
                                     <h3 class="card-title text-center fs-4">{{item.nombre}}</h3>
-                                    <p class="card-text text-center">{{item.descripcion}}</p>
                                     <p class="card-text text-center  fuenteBotones fw-bold fs-5">
                                         <strong>Price:</strong>${{item.precio | number}}</p>
                                 </div>

@@ -6,8 +6,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-between align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link fuenteLinks  fw-bold ms-5 colorItemsNavPrincipales" routerLink="">Home</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link fuenteLinks  fw-bold ms-5 colorItemsNavPrincipales" routerLink="/RegistrarUsuario">Registrarse</a>
                     </li>
@@ -24,12 +26,12 @@
                     <li class="nav-item">
                         <i class=" ms-5 fa-brands fa-square-instagram fa-2xl colorItemsNavPrincipales"></i>
                     </li>
-                    <<li>
+                    <li>
                         <button class=" btn nav-item text-center d-flex flex-direction-row" routerLink="/carrito">
                             <i class="fas fa-cart-plus ms-3 colorItemsNavPrincipales text-primary" style="font-size:30px;"></i>
                             <div class="badge bg-danger" style="font-size:10px;">{{totalItem}}</div>
                         </button>
-                        </li>
+                    </li>
                 </ul>
 
             </div>

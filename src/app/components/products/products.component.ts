@@ -10,11 +10,11 @@ import { Productos } from 'src/app/models/productos';
 })
 export class ProductsComponent implements OnInit {
 
-    value: number = 40;
-    highValue: number = 60;
+    value: number = 9999;
+    highValue: number = 130000;
     options: Options = {
-        floor: 0,
-        ceil: 100
+        floor: 9999,
+        ceil: 130000
     };
 
     listaProductosAccesorios: Productos[] = [];

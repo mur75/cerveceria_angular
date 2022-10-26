@@ -1,0 +1,94 @@
+<app-navbar2></app-navbar2>
+
+<ng-container *ngIf="products.length !=0">
+    <div class="container mt-5">
+        <div class="d-flex flex-direction-row">
+            <div class="col-6 ">
+                <h1>CARRITO DE COMPRAS</h1>
+            </div>
+        </div>
+
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Foto</th>
+                    <th style="width:250px;" scope="col">Producto</th>
+                    <th scope="col">precio</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="align-middle" *ngFor="let item of products ; let i = index">
+                    <th scope="row">
+                        <button class="rounded-circle" (click)="removeItem(item)">X</button>
+                    </th>
+                    <td style="width: 200px;">
+                        <img class="w-50" src="{{item.imagen}}" alt="">
+                    </td>
+                    <td>{{item.nombre}}</td>
+                    <td>{{item.precio}}</td>
+                    <td>
+                        <div class="btn-group w-25 me-2" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-light border-dark">{{item.quantity}}</button>
+                        </div>
+                    </td>
+                    <td>{{item.total}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <form>
+            <div class="mb-3">
+                <div class="">
+                    <div class="row">
+                        <div class="col-2">
+                            <button class="btn btn-dark mb-3" routerLink="/paquetesProductos">SEGUIR COMPRANDO</button>
+                            <button class="btn btn-dark" (click)="emptyCart()">BORRAR CARRITO </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <section class="container fuenteTitulos">
+        <section class="container">
+
+            <div class="row">
+                <div class="col-12 col-lg-6 offset-lg-6">
+                    <h2 class="mt-5 row col-6 fw-bold">TOTAL CARRITO</h2>
+                    <table class="table ">
+                        <tbody>
+                            <tr>
+                                <th scope="row"><strong>Subtotal</strong></th>
+                                <td class="fw-bold">${{grandTotal}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" class="fs-4">Total</th>
+                                <td class="fs-4">${{grandTotal}}</td>
+                            </tr>
+                            <tr class="mt-3 col d-flex flex-direction-row">
+                                <button type="button" class="btn colorbotones text-white  fuenteBotones col-8" routerLink="/pago">CHECKOUT</button>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </section>
+</ng-container>
+
+
+
+<ng-container *ngIf="products.length ==0">
+    <div class="col-6 border border-dark">
+        <p>Carrito Vacio</p>
+        <button class="btn btn-primary" routerLink="/paquetesProductos"> Compra Ahora </button>
+    </div>
+</ng-container>
+
+<app-footer></app-footer>

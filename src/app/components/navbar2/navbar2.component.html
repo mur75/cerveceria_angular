@@ -1,0 +1,47 @@
+<section>
+    <nav class="navbar navbar-expand-lg BackgroundNav text-white ">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <img class="w-75" src="assets/img/logoBlanco.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex justify-content-center aling-items-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link fuenteLinks fw-bold ms-5 text-white" routerLink="/RegistrarUsuario">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link fuenteLinks fw-bold ms-5 text-white" routerLink="/Login">Iniciar
+                            sesión </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle ms-5 colorItemsNav fuenteLinks fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" routerLink="/productos">
+                            Tienda
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item  fuenteLinks fw-bold" href="#">Cervezas</a></li>
+                            <li><a class="dropdown-item  fuenteLinks fw-bold" href="#">Packs</a></li>
+                            <li><a class="dropdown-item  fuenteLinks fw-bold" href="#">Accesorios</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <i class=" ms-5 fa-brands fa-facebook fa-2xl text-white"></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class=" ms-5 fa-brands fa-twitter fa-2xl text-white"></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class=" ms-5 fa-brands fa-square-instagram fa-2xl text-white"></i>
+                    </li>
+                    <li>
+                        <button class=" btn nav-item text-center d-flex flex-direction-row" routerLink="/carrito">
+                            <i class="fas fa-cart-plus ms-3 colorItemsNavPrincipales text-white" style="font-size:30px;"></i>
+                            <div class="badge bg-danger" style="font-size:10px;">{{totalItem}}</div>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>

@@ -1,0 +1,29 @@
+<app-navbar2></app-navbar2>
+
+<section class=" fuenteTexto fw-bold backgroungLogin paddigLogin">
+    <div class="posicionContenido">
+        <h1 class="fw-bold">Iniciar sesión</h1>
+
+        <form class="row g-3 d-flex flex-column ">
+            <div class="col-md-12">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-12">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4">
+            </div>
+
+
+            <div class="col-12">
+                <button type="submit" class="btn btnInicioSesion fuenteBotones text-white">Soy Usuario</button>
+            </div>
+            <div class="  col-lg-2 col-sm-12 ">
+                <button #btnNavAdmin (click)="desplegarNav()" type="button" class="btn btn-success text-white fuenteBotones ">Soy
+                    Administrador</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<app-footer></app-footer>

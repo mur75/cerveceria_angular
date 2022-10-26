@@ -1,0 +1,66 @@
+<app-navbar2></app-navbar2>
+
+<section class="container m-5">
+    <div class="d-flex justify-content-center align-items-center container-fluid mb-5">
+        <h1 class="h1">Formulario Productos</h1>
+    </div>
+    <form [formGroup]="productForm" (ngSubmit)="agregarProducto()" class="row g-3">
+        <div class="mb-3 col-4">
+            <input type="text" formControlName="nombre" class="form-control" id="exampleInputText1" placeholder="Nombre">
+            <span *ngIf="productForm.get('nombre')?.hasError('required') && productForm.get('nombre')?.touched" class="text-danger fw-bold">El dato ingresado no es correcto</span>
+        </div>
+        <div class="mb-3 col-4">
+            <div class="input-group mb-3">
+                <input type="text" #popo (blurd)="cpf()" formControlName="precio" class="form-control" placeholder="Precio">
+                <span #popodos class="input-group-text" id="pepepopololo">$</span>
+            </div>
+            <span *ngIf="productForm.get('precio')?.hasError('required') && productForm.get('precio')?.touched" class="text-danger fw-bold">El dato ingresado no es correcdddto</span>
+        </div>
+        <div class="mb-3 col-4">
+            <input type="text" formControlName="describcion" class="form-control" id="exampleInputText1" placeholder="Describcion">
+            <span *ngIf="productForm.get('describcion')?.hasError('required') && productForm.get('describcion')?.touched" class="text-danger fw-bold">El dato ingresado no es correcto</span>
+        </div>
+        <div class="mb-3 col-4">
+            <input type="text" formControlName="estilo" class="form-control" id="exampleInputText1" placeholder="Estilo">
+            <span *ngIf="productForm.get('estilo')?.hasError('required') && productForm.get('estilo')?.touched" class="text-danger fw-bold">El dato ingresado no es correcto</span>
+        </div>
+        <div class="mb-3 col-4">
+            <input type="text" formControlName="casacervezera" class="form-control" id="exampleInputText1" placeholder="Casa cervezera">
+            <span *ngIf="productForm.get('casacervezera')?.hasError('required') && productForm.get('casacervezera')?.touched" class="text-danger fw-bold">El dato ingresado no es correcto</span>
+        </div>
+        <div class="mb-3 col-4">
+            <input type="text" formControlName="color" class="form-control" id="exampleInputText1" placeholder="Color">
+            <span *ngIf="productForm.get('color')?.hasError('required') && productForm.get('color')?.touched" class="text-danger fw-bold">El dato ingresado no es correcto</span>
+        </div>
+        <div class="mb-3 col-4">
+            <input type="number" formControlName="gradoalcohol" class="form-control" id="exampleInputText1" placeholder="Grado de alcohol">
+            <span *ngIf="productForm.get('gradoalcohol')?.hasError('required') && productForm.get('gradoalcohol')?.touched" class="text-danger fw-bold">El dato ingresado no es correcto</span>
+        </div>
+        <div class="mb-3 col-4">
+            <input type="text" formControlName="paisorigen" class="form-control" id="exampleInputText1" placeholder="Pais de origen">
+            <span *ngIf="productForm.get('paisorigen')?.hasError('required') && productForm.get('paisorigen')?.touched" class="text-danger fw-bold">El dato ingresado no es correcto</span>
+        </div>
+        <div class="mb-3 col-4">
+            <input type="text" formControlName="presentacion" class="form-control" id="exampleInputText1" placeholder="Presentacion">
+            <span *ngIf="productForm.get('presentacion')?.hasError('required') && productForm.get('presentacion')?.touched" class="text-danger fw-bold">El dato ingresado no es correcto</span>
+        </div>
+        <div class="mb-3 col-4">
+            <input type="text" formControlName="ibu" class="form-control" id="exampleInputText1" placeholder="IBU">
+            <span *ngIf="productForm.get('ibu')?.hasError('required') && productForm.get('ibu')?.touched" class="text-danger fw-bold">El dato ingresado no es correcto</span>
+        </div>
+        <div class="mb-3 col-4">
+            <input type="text" formControlName="disponibilidad" class="form-control" id="exampleInputText1" placeholder="Disponibilidad">
+            <span *ngIf="productForm.get('disponibilidad')?.hasError('required') && productForm.get('disponibilidad')?.touched" class="text-danger fw-bold">El dato ingresado no es correcto</span>
+        </div>
+        <div class="mb-3 col-4">
+            <input type="text" formControlName="categoria" class="form-control" id="exampleInputText1" placeholder="Categoria">
+            <span *ngIf="productForm.get('categoria')?.hasError('required') && productForm.get('categoria')?.touched" class="text-danger fw-bold">El dato ingresado no es correcto</span>
+        </div>
+        <div class="input-group mb-3">
+            <input type="file " class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <button type="submit" class="btn btn-primary">Crear</button>
+    </form>
+</section>
+
+<app-footer></app-footer>

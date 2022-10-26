@@ -1,0 +1,69 @@
+<app-navbar2></app-navbar2>
+<section class="container mt-5 separacionFooter fuenteTextos">
+    <div class="row" *ngFor="let item of products ; let i = index">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img class="w-75" src="{{item.image}}" alt="">
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="h-25 d-inline-block">
+
+
+                <h3 class="border-bottom border-warning">{{item.title}}</h3>
+                <p class="fw-bold fs-4"><strong>Price:</strong>${{item.price}}</p>
+                <p>{{item.description}}</p>
+
+            </div>
+            <div class="d-flex flex-direction-row align-items-center h-25 d-inline-block">
+                <div>
+                    <button type="button" class="btn fuenteBotones colorbotones w-100 text-white" routerLink="/paquetesProductos" (click)="removeItem(item)">VOLVER A LA TIENDA</button>
+                </div>
+                <div>
+                    <button type="button" class="btn fuenteBotones colorbotones w-100 text-white " (click)="[addtocart(item), removeItem(item)]" routerLink="/paquetesProductos">AÑADIR AL CARRITO</button>
+                </div>
+            </div>
+
+            <h3>INFORMACION ADICIONAL</h3>
+            <table class="table table-striped mt-3 border-top">
+                <tbody>
+                    <tr>
+                        <th class="w-25">Casa Cervecera</th>
+                        <td class="text-warning">Alameda</td>
+                    </tr>
+                    <tr>
+                        <th>Color</th>
+                        <td class="text-warning">Dorado</td>
+                    </tr>
+                    <tr>
+                        <th>Grado de Alcohol</th>
+                        <td class="text-warning">5%</td>
+                    </tr>
+                    <tr>
+                        <th>País de Origen</th>
+                        <td class="text-warning">Alemania</td>
+                    </tr>
+                    <tr>
+                        <th>Presentación</th>
+                        <td class="text-warning">600 Ml</td>
+                    </tr>
+                    <tr>
+                        <th>IBU</th>
+                        <td class="text-warning">21</td>
+                    </tr>
+                    <tr>
+                        <th>Estilo</th>
+                        <td class="text-warning">Pilsner</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section style="margin-top: 200px">
+    <app-footer></app-footer>
+</section>
+

@@ -1,0 +1,47 @@
+.fuenteSubTitulos{
+    font-family: 'Playfair Display', serif;
+}
+
+.fuenteTextos{
+    font-family: 'Nunito', sans-serif;
+}
+
+.colorbotones{
+    background-color: #732002;
+
+}
+
+.colorbotones:hover{
+    background-color: #400101;
+}
+
+.colorTexto{
+    color: #400101;
+}
+
+.colorNumeros{
+    color: #732002;
+
+}
+
+
+
+.backgroundRegistro{
+    background-image: url(src/assets/img/fondoListaUsuarios.png);
+    background-size: cover;
+    
+    position: relative;
+}
+
+.backgroundRegistro::before{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color:rgb(244, 196, 154) ;opacity:0.8;
+}
+
+.posicionContenido{
+    position: relative;
+}
+
+

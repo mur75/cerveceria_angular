@@ -1,0 +1,50 @@
+<section>
+    <nav class="navbar navbar-expand-lg bg-secundary  ">
+        <div class="container d-flex align-content-center ">
+            <a class="navbar-brand" routerLink="/"> <img class="w-75" src="assets/img/logoNavbar1.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link fuenteLinks  fw-bold ms-5 colorItemsNavPrincipales" routerLink="/RegistrarUsuario">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link fuenteLinks  fw-bold ms-5 colorItemsNavPrincipales" routerLink="/Login">Iniciar
+                            sesion </a>
+                    </li>
+                    <li class="nav-item">
+                        <i class=" ms-5 fa-brands fa-facebook fa-2xl colorItemsNavPrincipales"></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class=" ms-5 fa-brands fa-twitter fa-2xl colorItemsNavPrincipales"></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class=" ms-5 fa-brands fa-square-instagram fa-2xl colorItemsNavPrincipales"></i>
+                    </li>
+                    <<li>
+                        <button class=" btn nav-item text-center d-flex flex-direction-row" routerLink="/carrito">
+                            <i class="fas fa-cart-plus ms-3 colorItemsNavPrincipales text-primary" style="font-size:30px;"></i>
+                            <div class="badge bg-danger" style="font-size:10px;">{{totalItem}}</div>
+                        </button>
+                        </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="imgNavbar1 fuenteLinks text-white">
+
+        <p class="posicionItemsNav fw-bold fs-1" routerLink="/"> CERVEZAS </p>
+
+        <div class="posicionItemsNav fw-bold fs-1 ">
+            <a class="text-white" routerLink="/paquetesProductos">PACKS </a>
+        </div>
+
+        <p class="posicionItemsNav pb-5  fw-bold fs-1" routerLink="/"> ACCESORIOS</p>
+
+    </section>
+</section>

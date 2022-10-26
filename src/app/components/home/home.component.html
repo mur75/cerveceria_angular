@@ -1,0 +1,141 @@
+<app-navbar></app-navbar>
+
+<section class="container-fluid mt-5" id="masVendidasYrecomendadas">
+    <div class="container d-flex">
+        <div>
+            <h2><span class="fs-4">MÁS</span><br><span class="fs-1">VENDIDAS</span></h2>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <div>
+                    <span class=" text-white bg-black d-flex flex-direction-column mt-5 nuevo">NUEVO</span>
+                    <span class="text-white bg-success d-flex flex-direction-column mt-5 exclusivo">EXCLUSIVO</span>
+                </div>
+                <img src="assets/img/AC-DC-Cerveza.png" class="card-img-top" alt="...">
+                <div class="card-body mt-5">
+                    <h5 class="card-title text-center fs-4">AC/DC Rock or Bust</h5>
+                    <p class="card-text text-center">600 ml | 8.2% | Porter</p>
+                    <p class="card-text text-center mt-1 fuenteBotones fw-bold fs-4">$18.900</p>
+                </div>
+                <div class="card-footer colorBotones  text-center ">
+                    <small class="text-white fs-4 fuenteBotones fw-b ">Añadir al carrito</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <div>
+                    <span class=" text-white bg-black d-flex flex-direction-column mt-5 nuevo">NUEVO</span>
+                </div>
+                <img src="assets/img/Amor-Fati.png" class="card-img-top" alt="...">
+                <div class="card-body mt-5">
+                    <h5 class="card-title text-center fs-4">Alternative Beer Amor Fati</h5>
+                    <p class="card-text text-center">330 ml | 4% | Porter</p>
+                    <p class="card-text text-center mt-1 fuenteBotones fw-bold fs-4">$15.900</p>
+                </div>
+                <div class="card-footer colorBotones  text-center ">
+                    <small class="text-white fs-4 fuenteBotones fw-b ">Añadir al carrito</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <div>
+                    <span class="text-white bg-success d-flex flex-direction-column mt-5 exclusivo">EXCLUSIVO</span>
+                </div>
+                <img src="assets/img/Moritz-Red-IPA.png" class="card-img-top" alt="...">
+                <div class="card-body mt-5">
+                    <h5 class="card-title text-center fs-4">Moritz Red IPA</h5>
+                    <p class="card-text text-center">330 ml | 6% | Porter</p>
+                    <p class="card-text text-center fuenteBotones mt-1 fw-bold fs-4">$15.900</p>
+                </div>
+                <div class="card-footer colorBotones text-center ">
+                    <small class="text-white fs-4  fuenteBotones fw-b ">Añadir al carrito</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <div>
+                    <h4 class="text-center">RECOMENDADA DE LA SEMANA</h4>
+                </div>
+                <div>
+                    <span class=" text-white bg-black d-flex flex-direction-column mt-5 nuevo">NUEVO</span>
+                    <span class=" text-white bg-success d-flex flex-direction-column mt-5 exclusivo">EXCLUSIVO</span>
+                </div>
+                <img src="assets/img/Duvel-1.5-lt-frente.png" class="card-img-top" alt="...">
+                <div class="card-body ">
+                    <h5 class="card-title text-center fs-4">Duvel Gift Pack</h5>
+                    <p class="card-text text-center">600 ml | 6% | Porter</p>
+                    <p class="card-text text-center mt-1 fuenteBotones fw-bold fs-4">$33.900</p>
+                </div>
+                <div class="card-footer colorBotones text-center ">
+                    <small class="text-white fs-4 fuenteBotones fw-b">Añadir al carrito</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-5">
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+            <img class="w-50 margen" src="assets/img/carruselLogos/carruselBaltika-Logo.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselBenediktiner-Logo.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselBitburger-Logo.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselChimay-Logo.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselChimay-Logo.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselCZECHVAR-Logo.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselDelirium-Logo.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselDuvel-Logo.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselErdinger-Logo.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselFullers-Logo.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselHofbrau-Logo.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselKostritzer-Logo.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselLogo-Alameda.jpeg" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselROBINSONS-BREWERY-LOGO.png" alt="">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img class="w-50" src="assets/img/carruselLogos/carruselBenediktiner-Logo.jpeg" alt="">
+        </ng-template>
+
+    </owl-carousel-o>
+</section>
+<section class=".container">
+    <div class="imagenFondo paddingTitle" style="background-image: url('assets/img/wepik-photo-mode-202296-185425.png');">
+        <h1 class="text-center  fw-bold text-white bg-success bordeRadius mt-1 p-1">VIVE MOMENTOS INCREIBLES
+        </h1>
+        <button type="button" class="btn btnHome fw-bold border border-1  mt-5 w-25 fuenteGeneral"> <i class="fa-solid fa-beer-mug"></i> PIDE AHORA</button>
+    </div>
+
+</section>
+
+<app-footerhome></app-footerhome>

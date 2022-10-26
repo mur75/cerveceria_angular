@@ -1,0 +1,48 @@
+.backgroundProfile{
+    background-image: url(src/assets/img/fondoPerfil.png);
+}
+.margenTabla{
+    padding: 0% 30% 0% 0%
+}
+
+.margenPerfil{
+    padding: 0% 0% 0% 30%;
+}
+
+
+
+.posicionTabla{
+    position: relative;
+}
+
+
+
+.titulosPerfil{
+    font-family: 'Playfair Display', serif;
+}
+
+.textosPerfil{
+    font-family: 'Nunito', sans-serif;
+}
+
+.btnEditar{
+    background-color: aqua;
+}
+
+.backgroundUsuarios{
+    background-image: url(src/assets/img/fondoListaUsuarios.png);
+    background-size: cover;
+    
+    position: relative;
+}
+
+.backgroundUsuarios::before{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color:rgb(244, 196, 154) ;opacity:0.6;
+}
+
+.posicionTitulo{
+    position: relative;
+}

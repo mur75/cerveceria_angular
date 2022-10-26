@@ -1,0 +1,53 @@
+.fuenteTitulosTabla{
+    font-family: 'Playfair Display', serif;
+}
+.fuenteContenidoTabla{
+    font-family: 'Nunito', sans-serif;
+}
+
+.colorbotones{
+    background-color: #732002;
+}
+
+.colorbotones:hover{
+    background-color: #400101;
+}
+
+
+.btnEliminar{
+    background-color: #400101;
+}
+
+.btnEliminar:hover{
+    background-color: #732002;
+}
+
+.btnEditar{
+    background-color: #fab43c;
+}
+
+.btnEditar:hover{
+    background-color: #ffca6f;
+}
+
+
+
+
+.backgroundUsuarios{
+    background-image: url(src/assets/img/fondoListaUsuarios.png);
+    background-size: cover;
+    
+    position: relative;
+}
+
+.backgroundUsuarios::before{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color:rgb(244, 196, 154) ;opacity:0.6;
+}
+
+.posicionTitulo{
+    position: relative;
+}
+

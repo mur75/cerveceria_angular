@@ -1,0 +1,87 @@
+
+.backgroundUsuarios{
+    /*background-image: url(src/assets/img/fondoListaUsuarios.png);*/
+    background-size: cover;
+    
+    position: relative;
+}
+
+.backgroundUsuarios::before{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color:rgb(244, 196, 154) ;opacity:0.6;
+}
+
+.posicionTitulo{
+    position: relative;
+}
+
+.fuenteTitulos{
+    font-family: 'Nunito', sans-serif;
+}
+
+.colorbotones{
+    background-color: #732002;
+
+}
+
+.colorbotones:hover{
+    background-color: #400101;
+}
+.fuenteBotones{
+
+    font-family: 'Playfair Display', serif;
+}
+.nuevo {
+    position: absolute;
+    top: 10%;
+    padding: 2%;
+}
+
+.exclusivo {
+    position: absolute;
+    top: 50%;
+    padding: 2%;
+}
+
+.colorBotones {
+    background-color: #732002;
+}
+
+.fuenteBotones {
+    font-family: 'Playfair Display', serif;
+}
+
+.fuenteGeneral {
+    font-family: 'Nunito', sans-serif;
+}
+
+.margen {
+    margin-left: 50px;
+}
+
+.imagenFondo {
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    height: 700px;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.colorTexto {
+    color: #732002;
+}
+
+.bordeRadius {
+    border-radius: 10px;
+}
+
+.altoTarjetas {
+    min-height: 80%;
+}

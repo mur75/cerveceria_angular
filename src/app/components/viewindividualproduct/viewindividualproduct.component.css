@@ -1,0 +1,20 @@
+.fuenteTextos{
+    font-family: 'Nunito', sans-serif;
+}
+
+.colorbotones{
+    background-color: #732002;
+
+}
+
+.colorbotones:hover{
+    background-color: #400101;
+}
+.fuenteBotones{
+
+    font-family: 'Playfair Display', serif;
+}
+
+.separacionFooter{
+    margin-bottom: 15%;
+}

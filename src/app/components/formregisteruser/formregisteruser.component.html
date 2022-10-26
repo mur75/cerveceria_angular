@@ -1,0 +1,160 @@
+<app-navbar2></app-navbar2>
+
+<section class="backgroundRegistro fuenteTitulos ">
+    <section class="posicionContenido fw-bold">
+        <div class="container row ">
+            <h1 class=" fuenteTitulos fw-bold col-12 m-5">Registrarse</h1>
+            <h2 class="  fw-bold  col-sm-12 col-lg-6  offset-lg-5">¿Por qué hacer parte de nuestra comunidad?</h2>
+            <ul class="container row fuenteTextos mt-5  mb-5 list-unstyled">
+                <li class=" offset-lg-3 col-lg-3  col-sm-12 ">
+                    <i class="fa-sharp fa-solid fa-1 fa-2xl colorNumeros"></i>
+                    <p>Vas a conocer de primera mano las novedades sobre la cerveza que se produce en Colombia y las tendencias a nivel mundial.</p>
+                </li>
+                <li class="col-lg-3  col-sm-12 ">
+                    <i class="fa-sharp fa-solid fa-2 fa-2xl colorNumeros"></i>
+                    <p>Te enterarás de manera exclusiva sobre cada una de las promociones, descuentos, regalos e invitaciones a eventos que realizaremos en Alternative Beer.</p>
+                </li>
+                <li class="col-lg-3  col-sm-12 ">
+                    <i class="fa-sharp fa-solid fa-3 fa-2xl colorNumeros"></i>
+                    <p>Vas a recibir recomendaciones, recetas y toda la información gastronómica y curiosa sobre la cerveza.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+
+        <form class="row g-3 container ms-5 fw-bold fuenteTextos posicionContenido " [formGroup]="registerUser" (ngSubmit)="guardarUsuario()">
+            <div class="col-lg-6  col-sm-12">
+                <label for="inputEmail4" class="form-label">Nombre</label>
+                <input type="email" class="form-control" formControlName="nombre">
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('nombre')?.hasError('required') && registerUser.get('nombre')?.touched">Por favor, escriba su nombre</span>
+            </div>
+            <div class="col-lg-6  col-sm-12">
+                <label for="inputPassword4" class="form-label">Apellido</label>
+                <input type="text" class="form-control" formControlName="apellido">
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('apellido')?.hasError('required') && registerUser.get('apellido')?.touched">Por favor, escriba su apellido</span>
+            </div>
+            <div class="col-lg-6  col-sm-12">
+                <label for="inputEmail4" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" formControlName="correo">
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('correo')?.hasError('required') && registerUser.get('correo')?.touched">Por favor, escriba un correo válido</span>
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('correo')?.hasError('pattern')">Por favor, escriba un correo válido</span>
+            </div>
+            <div class="col-lg-6  col-sm-12">
+                <label for="inputZip" class="form-label">Ig</label>
+                <input type="text" class="form-control" formControlName="instagram">
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('instagram')?.hasError('required') && registerUser.get('instagram')?.touched">Por favor, escriba su cuenta de instagram</span>
+            </div>
+            <div class="col-lg-6  col-sm-12">
+                <button type="submit" class="btn colorbotones text-white fuenteBotones ">Registrarme</button>
+            </div>
+            <div class="offset-lg-10  col-lg-2 col-sm-12 mb-5">
+                <button #btninfoClub (click)="desplegar()" type="button" class="btn btn-success text-white fuenteBotones ">Unirme al club</button>
+            </div>
+        </form>
+    </section>
+
+
+    <section #formClub class="posicionContenido visually-hidden  fw-bold">
+
+
+        <div class="container row posicionContenido">
+            <h2 class="offset-5 fw-bold">Beneficios por ser parte de nuestro club</h2>
+            <ul class="container row fuenteTextos mt-5  mb-5 list-unstyled">
+                <li class="offset-lg-3 col-lg-2    col-sm-12">
+                    <i class="fa-sharp fa-solid fa-1 fa-2xl colorNumeros"></i>
+                    <p>Domicilios gratis</p>
+                </li>
+                <li class="col-lg-2 col-sm-12  ">
+                    <i class="fa-sharp fa-solid fa-2 fa-2xl colorNumeros"></i>
+                    <p>Cupones de descuento para fechas especiales.</p>
+                </li>
+                <li class="col-lg-2 col-sm-12 ">
+                    <i class="fa-sharp fa-solid fa-3 fa-2xl colorNumeros"></i>
+                    <p>Envío de degustaciones de productos nuevos</p>
+                </li>
+                <li class="col-lg-2 col-sm-12 ">
+                    <i class="fa-sharp fa-solid fa-4 fa-2xl colorNumeros"></i>
+                    <p>Aprende sobre cervezas y cervecerías.</p>
+                </li>
+
+            </ul>
+        </div>
+
+        <form class="row g-3 container ms-5 fw-bold fuenteTextos" [formGroup]="registerUser" (ngSubmit)="guardarUsuario()">
+
+            <div class="col-lg-4  col-sm-12">
+                <label for="inputState" class="form-label">Ciudad</label>
+                <select formControlName="ciudad" class="form-select">
+                    <option value="">-</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Barranquilla">Barranquilla</option>
+                    <option value="Bogotá">Bogotá</option>
+                    <option value="Bucaramanga">Bucaramanga</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Cartagena">Santa Martha</option>
+                </select>
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('ciudad')?.hasError('required') && registerUser.get('ciudad')?.touched">Por favor, seleccione una ciudad</span>
+            </div>
+
+            <div class="col-lg-6 col-sm-12">
+                <label for="inputAddress" class="form-label">Dirección</label>
+                <input type="text" class="form-control" formControlName="direccion" placeholder="1234 Main St">
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('direccion')?.hasError('required') && registerUser.get('direccion')?.touched">Por favor, escriba su dirección</span>
+            </div>
+            <div class="col-lg-2 col-sm-12">
+                <label for="inputAddress" class="form-label">Complemento</label>
+                <input type="text" class="form-control" formControlName="complementoDireccion" placeholder="apto/casa">
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('complementoDireccion')?.hasError('required') && registerUser.get('complementoDireccion')?.touched">por favor especificque si vive en casa o apto y el número del mismo</span>
+            </div>
+
+            <div class="col-lg-6 col-sm-12">
+                <label for="inputZip" class="form-label">Teléfono</label>
+                <input type="number" class="form-control" formControlName="telefono">
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('telefono')?.hasError('pattern') && registerUser.get('telefono')?.touched">Por favor, escriba su teléfono</span>
+            </div>
+            <div class="col-lg-6 col-sm-12 ">
+                <label for="inputState" class="form-label">Tipo de identificación</label>
+                <select formControlName="tipoId" class="form-select">
+                    <option value="">-</option>
+                    <option value="Cédula">Cédula</option>
+                    <option value="CédulaExtranjeria">Cédula de extranjería</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                </select>
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('tipoId')?.hasError('pattern') && registerUser.get('tipoId')?.touched">Por favor, elija du tipo de identificación</span>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <label for="inputZip" class="form-label">Numero de identificación</label>
+                <input type="text" class="form-control" formControlName="numeroId">
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('numeroId')?.hasError('required') && registerUser.get('numeroId')?.touched">Por favor, escriba su número de identificación</span>
+            </div>
+            <div class="col-lg-6  col-sm-12">
+                <label for="inputPassword4" class="form-label">Crear contrseña</label>
+                <input type="password" class="form-control" formControlName="password">
+                <span class="fs-6 fst-italic fw-light">La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.
+                    NO puede tener otros símbolos.</span>
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('password')?.hasError('pattern') && registerUser.get('password')?.touched">Por favor, escriba una contraseña válida</span>
+            </div>
+
+            <div class="col-lg-6 col-sm-12">
+                <label for="inputPassword4" class="form-label">Verificar contraseña</label>
+                <input type="password" class="form-control" formControlName="VericarClave">
+            </div>
+
+            <div class="col-lg-6 col-sm-12">
+                <label for="inputZip" class="form-label">Tu alias cervecero</label>
+                <input type="text" class="form-control" formControlName="alias">
+                <span class="text-danger fw-bold" *ngIf="registerUser.get('alias')?.hasError('required') && registerUser.get('alias')?.touched">Por favor, escribe tu alias cervecero</span>
+            </div>
+
+            <div class="col-lg-12 col-sm-12">
+                <button type="submit" class="btn colorbotones text-white fuenteBotones mb-5">Suscribirme</button>
+            </div>
+        </form>
+        <div class=" offset-lg-9  col-sm-12 p-5">
+            <button #btnOcultar (click)="ocultar()" type="button" class="btn btn-success text-white fuenteBotones ">Unirme en otra ocasión</button>
+        </div>
+    </section>
+</section>
+
+<app-footer></app-footer>

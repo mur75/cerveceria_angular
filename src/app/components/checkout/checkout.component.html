@@ -1,0 +1,72 @@
+<section id="formCheckout" class="mt-5 mb-5 container">
+    <div class="row" > 
+        <div id="formu" class="col-sm-12 col-lg-6" [formGroup]="datosEnvioForm" (ngSubmit)="agregarInformacion()"> <!---->
+            <form class="mt-5" >  <!---->
+                <h1>Detalle de Facturación</h1>
+                <div class="mb-3 mt-5">
+                    <input type="text" formControlName="nombreApellido" class="form-control" id="nombre" placeholder="Nombre y Apellido">
+                </div>
+                <div class="mb-3">
+                    <input type="number" formControlName="identificacion" class="form-control" id="identificacion" placeholder="Identificación">
+                </div>
+                <div class="mb-3">
+                    <input type="text" formControlName="direccionCiudad" class="form-control" id="direccion" placeholder="Dirección y Ciudad">
+                </div>
+                <div class="mb-3">
+                    <input type="text" formControlName="departamento" class="form-control" id="departamento" placeholder="Departamento">
+                </div>
+                <div class="mb-3">
+                    <input type="number" formControlName="telefono" class="form-control" id="telefono" placeholder="Telefono">
+                </div>
+                <div class="mb-3">
+                    <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" placeholder="Email address">
+                </div>
+                <div class="mt-3 col d-flex flex-direction-row">
+                    <button type="submit" class="btn bg-black  btn-dark col-8">FINALIZAR COMPRA</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="subtotal" class="col-sm-12 col-lg-5 border offset-1">
+            <h3 class="border-bottom bg-light">TU PEDIDO</h3>
+            <div>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="">Subtotal</th>
+                            <td class="fw-bold">${{grandTotal}}</td>
+                        </tr>
+                       
+                        <tr>
+                            <th scope="row" class="fs-4">Total</th>
+                            <td class="fw-bold fs-4">${{grandTotal}}</td> <!--formControlName="total"-->
+                        </tr>
+                    </tbody>
+                    <div>
+                        <div class="mt-2">
+                            <p>
+                                El tiempo de entrega para la ciudad de Cali es de 24 a 48 horas hábiles y para otras ciudades es de 2 a 5 días hábiles luego de haber sido procesado.
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                Pagos en linea PayU Latinoamérica
+                            </p>
+                        </div>
+                        <div>
+                            <img src="assets/img/logoPayU.png" alt="">
+                        </div>
+                        <div>
+                            <p>
+                                Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta web y otros propósitos descritos en nuestra política de privacidad.
+                            </p>
+                        </div>
+                        <div class="mt-3 col d-flex flex-direction-row">
+                            <button type="button" class="btn bg-black  btn-dark col-8" routerLink="/carrito">VOLVER AL CARRITO</button>
+                        </div>
+                    </div>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

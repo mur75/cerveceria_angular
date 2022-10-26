@@ -1,0 +1,28 @@
+.fuenteLinks{
+    font-family: 'Playfair Display', serif;
+    
+}
+
+.imgNavbar1{
+    background-image: url(src/assets/img/imagenNav1.png);
+    width: 100%;
+}
+
+.posicionItemsNav{
+    padding-top: 10%;
+    padding-left: 5%;
+    
+}
+
+.colorItemsNav{
+    color: #F2F0F2;
+}
+
+.colorItemsNavPrincipales{
+
+    color: #732002;
+}
+.BackgroundNav{
+
+    background-color: #400101;
+}

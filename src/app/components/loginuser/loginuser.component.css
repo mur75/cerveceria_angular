@@ -1,0 +1,68 @@
+
+.paddigLogin{
+    padding: 10% 20%;
+}
+
+.fuenteBotones{
+    font-family: 'Playfair Display', serif;
+    
+}
+
+.fuenteTexto{
+    font-family: 'Nunito', sans-serif;
+}
+
+.btnInicioSesion{
+    background-color: #400101;
+}
+
+.btnInicioSesion:hover{
+    background-color: #732002;
+}
+
+.backgroungLogin{
+    background-image: url(src/assets/img/fondoLogin.png) ;
+    background-size: cover;
+    
+    position: relative;
+}
+
+.backgroungLogin::before{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color:rgb(244, 196, 154) ;opacity:0.8;
+}
+
+.posicionContenido{
+    position: relative;
+}
+
+.fuenteLinks{
+    font-family: 'Playfair Display', serif;
+    
+}
+
+.imgNavbar1{
+    background-image: url(src/assets/img/imagenNav1.png);
+    width: 100%;
+}
+
+.posicionItemsNav{
+    padding-top: 10%;
+    padding-left: 5%;
+    
+}
+
+.colorItemsNav{
+    color: #F2F0F2;
+}
+
+.colorItemsNavPrincipales{
+
+    color: #732002;
+}
+.BackgroundNav{
+
+    background-color: #400101;
+}

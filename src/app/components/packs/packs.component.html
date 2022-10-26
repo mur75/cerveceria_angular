@@ -1,0 +1,38 @@
+<app-navbar2></app-navbar2>
+<div class="row">
+    <div class="col-2">
+        <app-products></app-products>
+    </div>
+    <div class="col-10">
+        <section class="mt-4 mb-5">
+            <div class="container-fluid" id="masVendidasYrecomendadas">
+                <div class="container d-flex">
+                    <div>
+                        <h2><span class="fs-1 fuenteBotones">LOS</span><br><span class="fuenteBotones fuenteGrande">PAKS</span></h2>
+                    </div>
+                </div>
+                <div class=" container">
+                    <div class="row">
+                        <ng-container *ngFor="let item of productList">
+                            <div class="card col-sm-1 col-lg-4 col-md-3 mb-3" style="height: 700px;">
+                                <img style="cursor:pointer;" (click)="addtoIndividual(item)" routerLink="/descripcionProducto" src="{{item.imagen}}" class=" w-25 h-25 " alt="...">
+                                <div class="card-body ">
+                                    <h3 class="card-title text-center fs-4">{{item.nombre}}</h3>
+                                    <p class="card-text text-center">{{item.descripcion}}</p>
+                                    <p class="card-text text-center  fuenteBotones fw-bold fs-5">
+                                        <strong>Price:</strong>${{item.precio | number}}</p>
+                                </div>
+                                <div class="text-center btn-dark row p-3 ">
+                                    <button class="btn colorBotones text-white fs-4 fuenteBotones fw-b col-12 addtocart" (click)="addtocart(item)">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<app-footer></app-footer>

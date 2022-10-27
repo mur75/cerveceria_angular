@@ -3,7 +3,7 @@
 
     <div class=" d-flex ">
         <div>
-            <h2 class="fuenteBotones fuenteGrande mt-5 ms-5">PRODUCTOS</h2>
+            <h3 class="fuenteBotones fuenteGrande mt-5 ms-5">PRODUCTOS</h3>
         </div>
     </div>
 
@@ -21,8 +21,8 @@
                 </div>  -->
                 
                 <div class="container ">
-                    <div class="row    ms-5">
-                        <ng-container  *ngFor="let item of productList">
+                    <div class="row">
+                        <ng-container class="d-flex flex-column justify-content-center align-items-center" *ngFor="let item of productList">
                             <div class="m-2 card col-xs-1 col-lg-3 col-md-3 mb-3 d-flex justify-content-center align-items-center g-2" style="height: 500px; ">
                                 <img style="cursor:pointer;" (click)="addtoIndividual(item)" routerLink="/descripcionProducto" src="{{item.imagen}}" class=" w-auto h-50" alt="...">
                                 <div class="card-body ">

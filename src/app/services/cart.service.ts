@@ -35,9 +35,12 @@ export class CartService {
     }
 
     removeCartItem(product: any) {
+        //console.log(this.cartItemList)
         this.cartItemList.map((a: any, index: any) => {
-            if (product.id === a.id) {
-                this.cartItemList.splice(index, 1);
+           // console.log(a)
+            
+        if (product._id === a._id) {
+                this.cartItemList.slice(a);
             }
         })
         this.productList.next(this.cartItemList);

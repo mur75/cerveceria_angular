@@ -4,14 +4,16 @@
     <div class="posicionContenido">
         <h1 class="fw-bold">Iniciar sesión</h1>
 
-        <form class="row g-3 d-flex flex-column ">
+        <form class="row g-3 d-flex flex-column" [formGroup]="validarUsuario" (ngSubmit)="guardarValidacion()">
             <div class="col-md-12">
                 <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail4">
+                <input type="email" class="form-control" formControlName="correo">
+                <span class="text-danger fw-bold" *ngIf="validarUsuario.get('correo')?.hasError('required') && validarUsuario.get('correo')?.touched" >Por favor, escriba su correo</span>
             </div>
             <div class="col-md-12">
                 <label for="inputPassword4" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword4">
+                <input type="pas" class="form-control" formControlName="password">
+                <span class="text-danger fw-bold" *ngIf="validarUsuario.get('password')?.hasError('required') && validarUsuario.get('password')?.touched" >Por favor, escriba su contraseña</span>
             </div>
 
 
@@ -19,7 +21,7 @@
                 <button type="submit" class="btn btnInicioSesion fuenteBotones text-white">Soy Usuario</button>
             </div>
             <div class="  col-lg-2 col-sm-12 ">
-                <button #btnNavAdmin (click)="desplegarNav()" type="button" class="btn btn-success text-white fuenteBotones ">Soy
+                <button  type="button" class="btn btn-success text-white fuenteBotones ">Soy
                     Administrador</button>
             </div>
         </form>

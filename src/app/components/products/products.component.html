@@ -1,4 +1,4 @@
-<section class="container mt-5">
+<section class="container mt-5 d-none">
     <div class="d-flex flex-column border-end">
         <ul>
             <h1>Categoría</h1>
@@ -186,88 +186,196 @@
             </li>
         </ul>
     </div>
-    <!-- <main>
-            <h1 class="border-top border-bottom w-100 text-center">Cervezas</h1>
-            <div class="container-products">
-                <div class="row row-cols-3 row-cols-md-3 g-4" *ngFor="let misCervezas of listaProductosCervezas">
-                    <div class="col my-4" style="min-height: 170px;">
-                        <div class="card my-5" style="width: 18rem;min-height: 170px;">
-                            <img src="{{misCervezas.imagen}}" class="card-img-top" alt="..." width="auto" height="250px">
-                            <div class="card-body">
-                                <h5 class="card-title">{{misCervezas.nombre}}</h5>
-                                <p class="card-text">${{misCervezas.precio | number}}</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-primary">Juan peye</a>
-                                    <i class="fa-solid fa-cart-plus"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+</section>
+
+<section class="d-flex justify-content-between mt-3">
+    <div class="btn-group">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categoría
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Accesorios
+                    </label>
                 </div>
-            </div>
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <h1 class="border-top border-bottom w-100 text-center">Accesorios</h1>
-                <div class="row row-cols-3 row-cols-md-3 g-4" *ngFor="let misAccesorios of listaProductosAccesorios">
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="{{misAccesorios.imagen}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">{{misAccesorios.nombre}}</h5>
-                                <p class="card-text">$ {{misAccesorios.precio | number}}</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-primary">Juan peye</a>
-                                    <i class="fa-solid fa-cart-plus"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Cervezas
+                    </label>
                 </div>
-            </div>
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <h1 class="border-top border-bottom w-100 text-center">Packs</h1>
-                <div>
-                    <ul class="d-flex gap-5">
-                        <li>
-                            <div class="card" style="width: 18rem;">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        <i class="fa-solid fa-cart-plus"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card" style="width: 18rem;">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        <i class="fa-solid fa-cart-plus"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card" style="width: 18rem;">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        <i class="fa-solid fa-cart-plus"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Estilos
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Amber Ale
+                    </label>
                 </div>
-            </div>
-        </main> -->
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        American Pale Ale
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        American Stout
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Amercian Wheat
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Barleywine
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Belgian Strong Ale
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Coffe Milk Stout
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Cream Ale
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Doble IIPA
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Dry Stout
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Golden Stout
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Honey Ale
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Imperial IPA
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        New England IPA
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Session IPA
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            País
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Alemania
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Bélgica
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Colombia
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Escocia
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </div>
 </section>

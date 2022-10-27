@@ -23,8 +23,8 @@
         </div>
 
 
-        <form class="row g-3 container ms-5 fw-bold fuenteTextos posicionContenido " [formGroup]="registerUser" (ngSubmit)="guardarUsuario()">
-            <div class="col-lg-6  col-sm-12">
+        <form class="row g-3 container ms-lg-5 ms-0 fw-bold fuenteTextos posicionContenido" [formGroup]="registerUser" (ngSubmit)="guardarUsuario()">
+            <div class="col-lg-6 col-xs-12 col-12">
                 <label for="inputEmail4" class="form-label">Nombre</label>
                 <input type="email" class="form-control" formControlName="nombre">
                 <span class="text-danger fw-bold" *ngIf="registerUser.get('nombre')?.hasError('required') && registerUser.get('nombre')?.touched">Por favor, escriba su nombre</span>
@@ -59,7 +59,7 @@
 
 
         <div class="container row posicionContenido">
-            <h2 class="offset-5 fw-bold">Beneficios por ser parte de nuestro club</h2>
+            <h2 class="offset-0 offset-lg-5 fw-bold">Beneficios por ser parte de nuestro club</h2>
             <ul class="container row fuenteTextos mt-5  mb-5 list-unstyled">
                 <li class="offset-lg-3 col-lg-2    col-sm-12">
                     <i class="fa-sharp fa-solid fa-1 fa-2xl colorNumeros"></i>
@@ -81,18 +81,43 @@
             </ul>
         </div>
 
-        <form class="row g-3 container ms-5 fw-bold fuenteTextos" [formGroup]="registerUser" (ngSubmit)="guardarUsuario()">
-
+        <form class="row g-3 container ms-0 ms-lg-5 fw-bold fuenteTextos" [formGroup]="registerUser" (ngSubmit)="guardarUsuario()">
             <div class="col-lg-4  col-sm-12">
                 <label for="inputState" class="form-label">Ciudad</label>
                 <select formControlName="ciudad" class="form-select">
                     <option value="">-</option>
+                    <option value="Arauca">Arauca</option>
                     <option value="Armenia">Armenia</option>
                     <option value="Barranquilla">Barranquilla</option>
                     <option value="Bogotá">Bogotá</option>
                     <option value="Bucaramanga">Bucaramanga</option>
                     <option value="Cali">Cali</option>
-                    <option value="Cartagena">Santa Martha</option>
+                    <option value="Cartagena">Cartagena</option>
+                    <option value="Cúcuta">Cúcuta</option>
+                    <option value="Florencia">Florencia</option>
+                    <option value="Ibagué">Ibagué</option>
+                    <option value="Leticia">Leticia</option>
+                    <option value="Manizales">Manizales</option>
+                    <option value="Medellín">Medellín</option>
+                    <option value="Mitú">Mitú</option>
+                    <option value="Mocoa">Mocoa</option>
+                    <option value="Montería">Montería</option>
+                    <option value="Neiva">Neiva</option>
+                    <option value="Pasto">Pasto</option>
+                    <option value="Pereira">Pereira</option>
+                    <option value="Popayán">Popayán</option>
+                    <option value="Puerto Carreño">Puerto Carreño</option>
+                    <option value="Puerto Inírida">Puerto Inírida</option>
+                    <option value="Quibdó">Quibdó</option>
+                    <option value="Riohacha">Riohacha</option>
+                    <option value="San Andrés">San Andrés</option>
+                    <option value="San José del Guaviare">San José del Guaviare</option>
+                    <option value="Santa Marta">Santa Marta</option>
+                    <option value="Sincelejo">Sincelejo</option>
+                    <option value="Tunja">Tunja</option>
+                    <option value="Valledupar">Valledupar</option>
+                    <option value="Villavicencio">Villavicencio</option>
+                    <option value="Yopal">Yopal</option>
                 </select>
                 <span class="text-danger fw-bold" *ngIf="registerUser.get('ciudad')?.hasError('required') && registerUser.get('ciudad')?.touched">Por favor, seleccione una ciudad</span>
             </div>

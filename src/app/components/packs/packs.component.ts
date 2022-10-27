@@ -34,7 +34,7 @@ export class PacksComponent implements OnInit {
         this.cartService.addtoCart(item);
         Swal.fire({
             icon: 'success',
-            title: 'Disfrutala 🍻',
+            title: 'Disfutala 🍻',
             text: 'Producto agregado correctamente'
         })
     }

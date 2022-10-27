@@ -29,12 +29,12 @@
                     <span *ngIf="datosEnvioForm.get('email')?.hasError('pattern')" class="text-danger ps-1 fw-bold">Escribe bien tu correo</span>
                 </div>
                 <div class="mt-3 col d-flex flex-direction-row">
-                    <button type="submit" class="btn bg-black  btn-dark col-8" [disabled]="datosEnvioForm.invalid">FINALIZAR COMPRA</button>
+                    <button type="submit" class="btn bg-black  btn-dark col-8 mb-5" [disabled]="datosEnvioForm.invalid">FINALIZAR COMPRA</button>
                 </div>
             </form>
         </div>
 
-        <div id="subtotal" class="col-sm-12 col-lg-5 border offset-1">
+        <div id="subtotal" class="col-sm-12 col-lg-5 border container">
             <h3 class="border-bottom bg-light">TU PEDIDO</h3>
             <div>
                 <table class="table">

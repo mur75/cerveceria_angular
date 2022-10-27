@@ -40,7 +40,7 @@ export class CartService {
            // console.log(a)
             
         if (product._id === a._id) {
-                this.cartItemList.slice(a);
+                this.cartItemList.pop(index, 1);
             }
         })
         this.productList.next(this.cartItemList);

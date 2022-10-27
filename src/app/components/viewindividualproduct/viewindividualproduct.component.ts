@@ -3,6 +3,7 @@ import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 import { DescriocionIndividualService } from 'src/app/services/descriocion-individual.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-viewindividualproduct',
@@ -11,7 +12,7 @@ import { DescriocionIndividualService } from 'src/app/services/descriocion-indiv
 })
 export class ViewindividualproductComponent implements OnInit {
 
-  public products : any = [];
+  public productos : any = [];
   public grandTotal !: number;
 
   constructor(private descIndividualProducto : DescriocionIndividualService, private cartService: CartService ) { }
@@ -19,7 +20,7 @@ export class ViewindividualproductComponent implements OnInit {
   ngOnInit(): void {
     this.descIndividualProducto.getProductsIndividual()
     .subscribe(res=>{
-      this.products = res;
+      this.productos = res;
       this.grandTotal = this.descIndividualProducto.getTotalPriceIndividual();
     })
   }
@@ -32,6 +33,11 @@ export class ViewindividualproductComponent implements OnInit {
 
   addtocart(item: any){
     this.cartService.addtoCart(item);
+    Swal.fire({
+      icon: 'success',
+      title: 'Disfrutala 🍻',
+      text: 'Producto agregado correctamente'
+  })
   }
 
   /*ngOnInit(): void {

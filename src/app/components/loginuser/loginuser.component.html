@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-12">
                 <label for="inputPassword4" class="form-label">Password</label>
-                <input type="pas" class="form-control" formControlName="password">
+                <input type="password" class="form-control" formControlName="password">
                 <span class="text-danger fw-bold" *ngIf="validarUsuario.get('password')?.hasError('required') && validarUsuario.get('password')?.touched" >Por favor, escriba su contraseña</span>
             </div>
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { Router } from '@angular/router';
 import { loginusuario } from 'src/app/models/login';
 import Swal from 'sweetalert2'
 
@@ -10,10 +11,11 @@ import Swal from 'sweetalert2'
 })
 export class LoginuserComponent implements OnInit {
 
- 
-    validarUsuario: FormGroup
 
-    constructor(private fb: FormBuilder) {
+    validarUsuario: FormGroup
+    dataUsuario?: any
+
+    constructor(private fb: FormBuilder, private router: Router) {
 
         this.validarUsuario = this.fb.group({
 
@@ -27,9 +29,33 @@ export class LoginuserComponent implements OnInit {
 
     guardarValidacion() {
         console.log(this.validarUsuario)
+        let usuario = this.validarUsuario.get("correo")?.value
+        let clave = this.validarUsuario.get("password")?.value
 
+        this.dataUsuario = localStorage.getItem("dataUsuario")
+        this.dataUsuario = JSON.parse(this.dataUsuario)
 
+        console.log("INFO ", this.dataUsuario)
 
+        if (this.dataUsuario.correo != usuario) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Ashh, tenemos una mala noticia :(',
+                text: 'Aun no eres mimebro de nuestro club, pero puedes registrarte totalmente gratis en nuestra pagina de registro'
+            })
+        }
+
+        if(this.dataUsuario.password != clave){
+            Swal.fire({
+                icon: 'error',
+                title: 'Ashh, tenemos una mala noticia :(',
+                text: 'Tus datos no coinciden con nuestros registros 😥'
+            })
+        }
+
+        if(this.dataUsuario.password == clave && this.dataUsuario.correo == usuario){
+            this.router.navigate(["paquetesProductos"])
+        }
 
 
         //login() {
